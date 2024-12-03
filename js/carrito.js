@@ -145,28 +145,37 @@ function mostrarDetallesBoleta(carritoFinal, totalFinal, vuelto, montoPagado) {
 
     // Contenido de la boleta
     boleta.innerHTML = `
-        <h2>Boleta de Compra</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${filasProductos}
-            </tbody>
-        </table>
-        <div class="totales">
-            
-            <p><strong>Total:</strong> S/${totalFinal.toFixed(2)}</p>
-    <p><strong>Efectivo:</strong> S/${montoPagado.toFixed(2)}</p>
-            <p><strong>Vuelto:</strong> S/${vuelto.toFixed(2)}</p>
+    <h2>Boleta de Compra</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${filasProductos}
+        </tbody>
+    </table>
+    <div class="totales">
+        <div class="total-linea">
+            <span>Total:</span>
+            <span>S/${totalFinal.toFixed(2)}</span>
         </div>
-        <button id="cerrar-detalles-boleta">Cerrar</button>
-    `;
+        <div class="total-linea">
+            <span>Efectivo:</span>
+            <span>S/${montoPagado.toFixed(2)}</span>
+        </div>
+        <div class="total-linea">
+            <span>Vuelto:</span>
+            <span>S/${vuelto.toFixed(2)}</span>
+        </div>
+    </div>
+    <button id="cerrar-detalles-boleta">Cerrar</button>
+`;
+
 
     // Evento para cerrar los detalles de la boleta
     document.getElementById("cerrar-detalles-boleta").addEventListener("click", () => {
