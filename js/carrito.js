@@ -14,6 +14,9 @@ function actualizarCarrito() {
     // Limpia el contenido del carrito
     carritoItems.innerHTML = "";
 
+    // Recalcular el precio total
+    totalPrecio = carrito.reduce((acc, producto) => acc + producto.subtotal, 0);
+
     carrito.forEach((producto, index) => {
         const item = document.createElement("div");
         item.classList.add("carrito-item");
@@ -34,6 +37,7 @@ function actualizarCarrito() {
     // Guardar en Local Storage
     guardarCarritoEnLocalStorage();
 }
+
 
 
 
@@ -78,6 +82,7 @@ function agregarAlCarrito(producto) {
 
     actualizarCarrito();
 }
+
 
 
 // Elimina un producto del carrito
