@@ -21,7 +21,7 @@ function actualizarCarrito() {
         const item = document.createElement("div");
         item.classList.add("carrito-item");
         item.innerHTML = `
-            <span>${producto.nombre} x${producto.cantidad} - S/${producto.subtotal.toFixed(2)}</span>
+            <span>${producto.nombre} S/${producto.precio.toFixed(2)} x${producto.cantidad} = S/${producto.subtotal.toFixed(2)}</span>
             <button class="btn-eliminar" onclick="eliminarDelCarrito(${index})">❌</button>
         `;
         carritoItems.appendChild(item);
@@ -37,6 +37,7 @@ function actualizarCarrito() {
     // Guardar en Local Storage
     guardarCarritoEnLocalStorage();
 }
+
 
 
 
