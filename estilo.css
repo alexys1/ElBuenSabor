@@ -621,6 +621,35 @@ a {
     color: #333;
 }
 
+/* Contenedor de totales */
+.totales {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+    padding: 10px 0;
+}
+
+/* Líneas de los totales */
+.totales .total-linea {
+    display: flex; /* Asegura la alineación horizontal */
+    justify-content: flex-start; /* Alinea todo al inicio */
+    margin-bottom: 5px; /* Espaciado mínimo entre líneas */
+    gap: 10px; /* Reduce el espacio entre las etiquetas y los valores */
+}
+
+/* Estilo de los textos */
+.totales span {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Alineación precisa */
+.totales span:first-child {
+    min-width: 100px; /* Ajusta la distancia fija entre el texto descriptivo y el valor */
+    text-align: left;
+}
 
 /* Animación de aparición */
 @keyframes fadeIn {
