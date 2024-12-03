@@ -1,0 +1,101 @@
+/* Sección Nosotros */
+#nosotros {
+    background-image: url(../media/Nostros/lineas.png);
+    background-size: 4%;
+    background-repeat: repeat;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #FFD9E0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+nav a.active {
+  background-color: #c87968 ; /* Fondo azul para el enlace activo */
+  color: white; /* Texto blanco para el enlace activo */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Sección principal con imagenes */
+#nosotros .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    height: auto; /* Se ajusta la altura para que sea flexible */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #faf1db;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Para que las columnas se ajusten en pantallas pequeñas */
+}
+
+#nosotros .section.reverse {
+    flex-direction: row-reverse;
+    margin-right: 0;
+}
+
+#nosotros .left,
+#nosotros .right {
+    flex: 1;
+    padding: 10px;
+    min-width: 300px; /* Asegura que el contenido tenga un ancho mínimo en pantallas pequeñas */
+}
+
+#nosotros .right {
+    text-align: right;
+}
+
+/* Imagenes */
+#nosotros .image {
+    max-width: 100%; /* Asegura que las imágenes no se desborden en pantallas pequeñas */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    #nosotros .section {
+        flex-direction: column; /* Alinea los elementos en columna en pantallas pequeñas */
+        height: auto; /* Permite que la altura se ajuste al contenido */
+        text-align: center; /* Centra el contenido en pantallas pequeñas */
+    }
+
+    #nosotros .left, #nosotros .right {
+        width: 100%; /* Ocupan todo el ancho */
+        padding: 20px 0;
+        text-align: center; /* Centra el texto y el contenido */
+    }
+
+    #nosotros .image {
+        margin: 10px 0;
+        height: auto; /* Ajusta la altura de la imagen según el ancho */
+    }
+
+    #nosotros .right {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #nosotros .section {
+        padding: 10px; /* Reduce el padding para pantallas muy pequeñas */
+    }
+
+    #nosotros .left, #nosotros .right {
+        padding: 10px 0;
+    }
+
+    #nosotros .image {
+        max-width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+        height: auto; /* Mantiene la proporción */
+    }
+}
+

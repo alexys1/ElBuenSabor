@@ -1,0 +1,314 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(213, 213, 213, 0.295);
+}
+
+h1 {
+    font-size: 65px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+
+
+/* Estilos para las listas */
+nav li {
+    display: inline;
+    margin-right: 1%;
+}
+
+nav a {
+    color: #787878;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+nav ul {
+    padding: 0.5%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+/* Sección del mensaje "Encuéntranos" */
+#mensajes {
+    text-align: center;
+    color: #4d4b4b;
+    background-color: #eae8e8;
+    padding: 1%;
+}
+
+#mensajes p {
+    font-size: 20px;
+}
+
+/* Sección principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Sección de la info contacto */
+.contacto-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.info-contacto {
+    width: 40%; /* Ocupa un 40% del espacio al lado derecho del formulario */
+    margin: 2.5% 0;
+    order: 2; /* Mantiene la info-contacto a la derecha del formulario */
+}
+
+.rosa {
+    color: rgb(230, 129, 144);
+}
+
+/* Sección del formulario */
+.formulario {
+    width: 55%; /* Ocupa un 55% al lado izquierdo de la info contacto */
+    margin: 2.5% 0;
+    order: 1; /* Mantiene el formulario en el lado izquierdo */
+    padding-left: 3rem; /* Añade un espacio a la izquierda del formulario */
+}
+
+.formulario label {
+    display: block;
+    font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+    width: 100%;
+    height: 25px;
+    padding: 1%;
+    margin-bottom: 1.5%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.formulario textarea {
+    width: 100%;
+    height: 50px;
+    padding: 1%;
+    margin-bottom: 1.5%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.formulario button {
+    background-color: #d298c0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #d298c0;
+}
+
+
+.redes{
+ display: flex;
+ justify-content: center;
+ gap:10px; /*para que esten separados*/ 
+}
+.redes a{
+    font-size: 25px;  
+    transition:all ease 300ms;
+}
+
+.redes a:hover{
+   transform: scale(1.2);  /*para que la transicion no sea muy rapida usar transicion en en contenedor a */
+}
+.facebook{
+    color:white;   
+}
+
+.whatsapp{
+    color:white;    
+}
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.modal h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin: 0;
+}
+
+.modal p {
+    font-size: 16px;
+    color: #555;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 1024px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    /* El contenedor de contacto y formulario ocuparán todo el ancho y se apilarán */
+    .contacto-container {
+        flex-direction: column; /* Cambia la dirección a vertical en pantallas pequeñas */
+    }
+
+    .info-contacto, .formulario {
+        width: 100%; /* Ambos ocuparán el 100% del ancho */
+        margin: 1rem 0;
+    }
+
+    .info-contacto {
+        order: 2; /* Mantiene la info-contacto debajo del formulario */
+    }
+
+    .formulario {
+        order: 1; /* Mantiene el formulario arriba de la info-contacto */
+        padding-left: 0; /* Elimina el padding extra en pantallas pequeñas */
+    }
+}
+.info-contacto {
+        display: flex; /* Aplica Flexbox */
+        flex-direction: column; /* Alinea los elementos en una columna */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Centra el texto */
+        gap: 1.5rem; /* Espaciado entre los íconos y los textos */
+    }
+
+    .info-contacto img {
+        margin: 3% auto; /* Centra las imágenes horizontalmente */
+        display: block;
+         padding-right: 5rem;
+    }
+
+    .info-contacto p {
+        margin: 0; /* Asegúrate de que no haya márgenes innecesarios */
+    }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .formulario input, .formulario textarea {
+        height: 30px;
+    }
+
+    .info-contacto {
+        display: flex; /* Aplica Flexbox */
+        flex-direction: column; /* Alinea los elementos en una columna */
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Centra el texto */
+        gap: 1.5rem; /* Espaciado entre los íconos y los textos */
+    }
+
+    .info-contacto img {
+        margin: 3% auto; /* Centra las imágenes horizontalmente */
+        display: block;
+         padding-right: 5rem;
+    }
+
+    .info-contacto p {
+        margin: 0; /* Asegúrate de que no haya márgenes innecesarios */
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    
+
+    nav ul {
+        font-size: 18px;
+    }
+
+    .formulario input, .formulario textarea {
+        height: 20px;
+    }
+
+    .info-contacto img {
+        width: 40px;
+    }
+
+    
+}

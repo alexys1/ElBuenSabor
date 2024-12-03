@@ -1,0 +1,135 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Estilo de la tabla de publicaciones de blog */
+.blog-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.blog-post {
+    padding: 80px;
+    text-align: center; 
+    border: 10px solid #fcd6d6;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    transform: scale(0.9);
+    background-color: #fff; /* Fondo blanco para el contenido */
+}
+
+.blog-post:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.blog-post h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    color: #646464;
+    margin-bottom: 20px;
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 250px;
+    margin-bottom: 20px;
+    border-radius: 8px; 
+}
+
+/* Estilo del pie de página */
+
+
+/* Estilo de enlaces */
+a {
+    color: #176ad0;
+    text-decoration: none;
+}
+.redes{
+ display: flex;
+ justify-content: center;
+ gap:10px; /*para que esten separados*/ 
+}
+.redes a{
+    font-size: 25px;  
+    transition:all ease 300ms;
+}
+
+.redes a:hover{
+   transform: scale(1.2);  /*para que la transicion no sea muy rapida usar transicion en en contenedor a */
+}
+.facebook{
+    color:white;   
+}
+
+.whatsapp{
+    color:white;    
+}
+
+blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta columnas dinámicamente */
+    gap: 20px; /* Espaciado entre publicaciones */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro para destacar */
+}
+
+@media (min-width: 1024px) {
+   .blog-grid {
+        display: grid; /* Usa Grid Layout */
+        grid-template-columns: repeat(3, 1fr); /* Fija 3 columnas */
+        grid-auto-rows: auto; /* Altura automática para cada fila */
+        gap: 20px; /* Espaciado entre filas y columnas */
+    }
+
+    .blog-post {
+        border: 1px solid #fcd6d6; /* Borde más simple */
+        padding: 15px; /* Reduce el padding para que no ocupe tanto espacio */
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+         padding: 80px;
+   border: 10px solid #fcd6d6;
+    background-color: #fff; 
+    }
+}
+@media (max-width: 768px) {
+  .blog-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    .blog-post {
+        padding: 85px; /* Reduce el padding interno */
+    }
+
+    .blog-post h2 {
+        font-size: 1.2em; /* Reduce el tamaño de los títulos */
+    }
+
+    .blog-post p {
+        font-size: 1em; /* Reduce el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    
+.blog-post {
+        padding: 85px; /* Menos espacio interno */
+    }
+
+    .blog-post h2 {
+        font-size: 1em; /* Aún más pequeño en dispositivos muy pequeños */
+    }
+
+    .blog-post p {
+        font-size: 0.9em;
+    }
+}

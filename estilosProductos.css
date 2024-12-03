@@ -1,0 +1,300 @@
+body { 
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgba(255, 228, 196, 0.295);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta cualquier contenido que exceda el ancho de la pantalla */
+}
+
+h1 {
+    font-size: 3.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.25em;
+}
+
+
+
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.product-list {
+    list-style-type: none;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    padding-right: 400px;
+}
+
+.product-list img {
+    max-width: 220px;
+    max-height: 360px;
+    width: auto; 
+    height: auto;
+}
+
+.product-item {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px; 
+    padding: 40px;
+    margin: 5px 5px 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-item h5 {
+    font-weight: normal;
+}
+
+.product-item h4 {
+    margin: 10px 0;
+}
+
+.product-item img {
+    max-width: 220px;
+    max-height: 220px;
+}
+
+.product-item h3 {
+    margin-top: 10px;
+}
+
+
+.filter-container {
+    background-color: #df856e57;
+    padding: 20px;
+    margin-left: 400px;
+    width: 400px;
+    height: 800px;
+    border-radius: 20px;
+}
+
+#navg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#titlecenter {
+    margin-bottom: 10px;
+}
+
+.catalog-container {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#third .container {
+    background-color: #F2E0DB;
+    text-align: center;
+    padding: 200px 12px;
+}
+
+
+/* Fondo oscuro detrás del popup */
+#popup-background {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 999; /* Asegura que esté encima del resto */
+}
+
+/* Contenedor del popup */
+#popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000; /* Encima del fondo */
+    width: 300px;
+}
+
+/* Imagen dentro del popup */
+#popup img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Botón para cerrar el popup */
+#popup button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rosybrown;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popup button:hover {
+    background-color: rgb(166, 128, 128);
+}
+
+.categorias li {
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.categorias li.active {
+    font-weight: bold;
+    color: #fff;
+    background-color: rosybrown;
+    border-radius: 5px;
+    padding: 10px;
+}
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Espacia bien los elementos */
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.producto p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.producto button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #d298c0;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #b279a3;
+}
+.ventana-emergente {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+.ventana-emergente img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.ventana-emergente.hidden {
+    display: none;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+        padding-right: 0;
+    }
+
+    .filter-container {
+        margin-left: 0;
+        width: 100%; /* El filtro ocupa todo el ancho en pantallas medianas */
+        height: auto;
+    }
+
+    /* Reorganizar catalog-container en columna */
+    .catalog-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .filtro-y-categorias {
+        width: 100%;
+        margin-bottom: 40px; /* Aumentar el espacio entre las categorías y los productos */
+    }
+
+    .content {
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+
+    .product-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .filter-container {
+        width: 100%;
+    }
+
+   
+}
+

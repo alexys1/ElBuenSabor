@@ -1,0 +1,831 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta cualquier contenido que exceda el ancho de la pantalla */
+}
+
+h1{ font-size: 3.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rosybrown;
+}
+button:hover{
+    background-color: rgb(166, 128, 128)
+}
+#tortaCantidad{
+    font-weight: bold;
+}
+
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: #FFD9E0;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.agregar-carrito {
+    margin:10px 0;
+}
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+header {
+    background-color: #FFD9E0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: #090909;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header nav {
+    text-align: center;
+    padding-bottom: 40px;
+    margin-right: 30px;
+}
+header nav a {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color: #6F7170;
+}
+
+#first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    )
+    ,url(img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#first h1{
+    color: white;
+}
+
+
+/* inicio del codigo reciclado */
+#second{
+    display: flex;
+    justify-content: center;
+}
+
+.container-second{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* background-color: antiquewhite; */
+    padding: 20px;
+    justify-content: center;
+}
+
+#popular-products{
+    /* background-color: darkcyan; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#popular-products h2{
+    font-size: 40px;
+    margin: 0;
+}
+
+#popular-products p{
+    font-size: 20px;
+    color: dimgray;
+    margin: 0;
+    padding-bottom: 17px;
+
+}
+
+#nav-products{
+    /* background-color: burlywood; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    padding: 15px;
+
+}   
+
+.platos{
+    height: 280px;
+    width: 210px;
+}
+/* fin del codigo reciclado */
+
+
+
+#third .container{
+    background-color: #F2E0DB;
+    text-align: center;
+    padding: 200px 12px;
+}
+
+footer{
+    background-color: rgb(29,28,28);
+    
+    width:100%;
+    height: auto;
+}
+footer p{
+    
+    color: rgb(120,120,120);
+}
+footer .container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#c1{
+    display: flex;
+}
+#c1-1{
+    width: 50%;
+}
+#c1-2 li{
+    color: rgb(120,120,120);
+}
+#c1-2 a{
+    color: rgb(120,120,120);
+    text-decoration: none;
+}
+#c1 h2{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+#c1 p{
+    font-size: 1em;
+}
+#c2{
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(29,28,28);
+}
+.redes{
+ display: flex;
+ justify-content: center;
+ gap:10px; /*para que esten separados*/ 
+}
+.redes a{
+    font-size: 25px;  
+    transition:all ease 300ms;
+}
+
+.redes a:hover{
+   transform: scale(1.2);  /*para que la transicion no sea muy rapida usar transicion en en contenedor a */
+}
+.facebook{
+    color:white;   
+}
+
+.whatsapp{
+    color:white;    
+}
+.platos {
+    opacity: 0.7; /* Hace que las imágenes tengan un 70% de opacidad */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Suaviza el cambio de opacidad y el aumento de tamaño */
+}
+
+/* Estilo cuando el ratón pasa sobre las imágenes */
+.platos:hover {
+    opacity: 1; /* La imagen se aclara completamente */
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% */
+}
+nav a.active {
+  background-color: #c87968 ; /* Fondo azul para el enlace activo */
+  color: white; /* Texto blanco para el enlace activo */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+a {
+    text-decoration: none; /* Elimina subrayado en todos los enlaces */
+}
+/* Estilo del carrito flotante */
+#carrito-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4CAF50; /* Verde profesional */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+
+#carrito-flotante:hover {
+    transform: scale(1.1);
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Estilo del contenedor de detalles del carrito */
+#carrito-detalles {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 350px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+#carrito-detalles h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Estilo de los ítems en el carrito */
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+    color: #555;
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+}
+
+.carrito-item span {
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-eliminar {
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: darkred;
+}
+
+/* Total y vuelto */
+#total-precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    text-align: right;
+}
+
+#vuelto {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Campo de pago */
+#monto-pago {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Botón de pago */
+#btn-pagar {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-pagar:hover {
+    background-color: #45a049;
+}
+/* Botón de cerrar carrito */
+.btn-cerrar-carrito {
+    background-color: transparent; /* Sin fondo */
+    border: none; /* Sin bordes */
+    font-size: 1.8em; /* Tamaño grande */
+    font-weight: bold; /* Negrita */
+    color: crimson; /* Color rojo */
+    cursor: pointer; /* Manito al pasar el mouse */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animación de transición */
+    margin-right: -10px; /* Opcional: ajusta el margen si queda desalineado */
+}
+
+.btn-cerrar-carrito:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+    color: darkred; /* Cambia a un rojo más oscuro */
+}
+
+/* Alineación dentro del encabezado del carrito */
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd; /* Línea separadora */
+}
+/* Fondo de sombra */
+#boleta-sombra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Contenedor principal de la boleta */
+#boleta-emergente {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Encabezado de la boleta */
+#boleta-emergente h2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Contenido de la boleta */
+#boleta-emergente p {
+    margin: 10px 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Sección de productos */
+#boleta-emergente ul {
+    text-align: left;
+    padding: 10px 20px;
+    margin: 0;
+    max-height: 150px; /* Para listas largas, con scroll */
+    overflow-y: auto;
+    list-style: none;
+}
+
+#boleta-emergente ul li {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Totales y vuelto */
+#boleta-emergente p strong {
+    color: #333;
+}
+
+/* Botones */
+#boleta-emergente button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#boleta-emergente button#ver-boleta {
+    background-color: #2196F3; /* Azul */
+}
+
+#boleta-emergente button#cerrar-boleta,
+#boleta-emergente button#cerrar-detalles-boleta {
+    background-color: #f44336; /* Rojo */
+}
+
+#boleta-emergente button:hover {
+    opacity: 0.8;
+}
+/* Imagen destacada en la ventana */
+#boleta-emergente img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Texto del encabezado */
+#boleta-emergente h2 {
+    background-color: transparent;
+    color: #4CAF50;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Botones ajustados */
+#boleta-emergente button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#boleta-emergente button#ver-boleta {
+    background-color: #2196F3; /* Azul */
+}
+
+#boleta-emergente button#cerrar-boleta,
+#boleta-emergente button#cerrar-detalles-boleta {
+    background-color: #f44336; /* Rojo */
+}
+
+#boleta-emergente button:hover {
+    opacity: 0.8;
+}
+/* Imagen destacada */
+#boleta-emergente img {
+    display: block;
+    margin: 10px auto; /* Centra la imagen */
+    width: 80px; /* Tamaño controlado */
+    height: 80px; /* Tamaño proporcional */
+    object-fit: contain; /* Ajuste perfecto sin distorsión */
+    border-radius: 50%; /* Opcional: redondea la imagen para un look más suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para destacar */
+}
+/* Estilo para la tabla de productos */
+#boleta-emergente table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+#boleta-emergente th,
+#boleta-emergente td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+#boleta-emergente th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+
+/* Estilo para los totales */
+#boleta-emergente .totales {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 1em;
+}
+
+#boleta-emergente .totales p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll en caso de muchos productos */
+#carrito-items {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+#first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    ), url(img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    /* Añadiendo la animación */
+    animation: zoomBackground 15s infinite ease-in-out;
+}
+/* Menú hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+/* Boleta Emergente */
+#boleta-emergente {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    text-align: center;
+    display: none; /* Oculto inicialmente */
+}
+
+#boleta-emergente h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+#boleta-emergente p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.2em;
+}
+
+#boleta-emergente button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#boleta-emergente button:hover {
+    background-color: #45a049;
+}
+
+#boleta-sombra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none; /* Oculto inicialmente */
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta cualquier contenido que exceda el ancho de la pantalla */
+}
+#nav-products {
+        display: flex;
+        flex-direction: column; /* Cambia la disposición a una sola columna */
+        align-items: center; /* Centra los productos horizontalmente */
+    }
+
+    .caja {
+        width: 90%; /* Asegura que las cajas ocupen un ancho razonable */
+        max-width: 300px; /* Limita el ancho máximo de las cajas */
+        margin-bottom: 20px; /* Agrega espacio entre las cajas */
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #FFD9E0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}
+@media (min-width: 850px){
+    body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta cualquier contenido que exceda el ancho de la pantalla */
+}
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;
+    }
+    header nav a{
+        justify-content: center;
+        padding-right: 20px;
+    }
+ 
+    #first{
+        height: 120vh;
+        background-position: center bottom;
+    }
+    #first h1{
+        font-size: 5em;
+    }
+    #first button{
+        font-size: 2.5em;
+    }
+}

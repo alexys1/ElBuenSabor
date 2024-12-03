@@ -1,0 +1,210 @@
+
+<html lang="es">
+    <head>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ElBuenSabor</title>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+              rel="stylesheet">
+    </head>
+    <body>
+       
+        <div id="mensaje"></div>
+        <header>
+            <div class="container">
+                <p class="logo">ElBuenSabor</p>
+                <!-- Botón de menú hamburguesa -->
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- Menú de navegación -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </header> 
+
+
+        <section id="first">
+            <div class="container">
+                <h1>El Buen <br>Sabor</h1>
+            </div>
+        </section>
+
+        <section id="second">
+            <div class="container-second">
+                <div id="popular-products">
+                    <h2>¡Las más pedidas!</h2>
+                    <br>
+                    <P>Las mas preferidas por nuestros clientes, encuéntralas en sus diferentes tamaños y sabores.</P>
+                </div>
+                <nav id="nav-products">
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/Lomo-saltado.png" alt="" class="platos">
+                        </a>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Lomo Saltado</a>
+                        <p class="preciaso">S/20.00</p>
+                        <button onclick="agregarAlCarrito({id: 9, nombre: 'Lomo Saltado', precio: 20})">Agregar al carrito</button>
+                    </div>
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/ceviche.jpeg" alt="" class="platos">
+                        </a>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Ceviche</a>
+                        <p class="preciaso">S/27.00</p>
+                       <button onclick="agregarAlCarrito({id: 17, nombre: 'Ceviche', precio: 27})">Agregar al carrito</button>
+                    </div>
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/Pisco-Sour.png" alt="" class="platos">
+                        </a>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Pisco Sour</a>
+                        <p class="preciaso">S/20.00</p>
+                        <button onclick="agregarAlCarrito({id: 26, nombre: 'Pisco Sour', precio: 20})">Agregar al carrito</button>
+                    </div>
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/pachamanca.jpg" alt="" class="platos">
+                        </a>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Pachamanca 3 sabores</a>
+                        <p class="preciaso">S/20.00</p>
+                        <button onclick="agregarAlCarrito({id: 11, nombre: 'Pachamanca', precio: 20})">Agregar al carrito</button>
+                    </div>
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/causa.jpeg" alt="" class="platos">
+                        </a>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Causa Limeña</a>
+                        <p class="preciaso">S/15.00</p>
+                        <button onclick="agregarAlCarrito({id: 2, nombre: 'Causa Limeña', precio: 15})">Agregar al carrito</button>
+                    </div>
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/aji-de-gallina.jpg" alt="" class="platos">
+                        </a>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Aji de Gallina</a>
+                        <p class="preciaso">S/18.00</p>
+                        <button onclick="agregarAlCarrito({id: 10, nombre: 'Ají de Gallina', precio: 18})">Agregar al carrito</button>
+                    </div>
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/tallarines.png" alt="" class="platos">
+                        </a>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Tallarines a la Huancaina</a>
+                        <p class="preciaso">S/20.00</p>
+                        <button onclick="agregarAlCarrito({id: 14, nombre: 'Tallarines a la Huancaína', precio: 20})">Agregar al carrito</button>
+                    </div>
+                    <div class="caja">
+                        <a href="#" class="products">
+                            <img src="img/carapulcra.jpeg" alt="" class="platos">
+                        </a>
+
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="" class="nombre-plato">Carapulcra</a>
+                        <p class="preciaso">S/20.00</p>
+                        <button onclick="agregarAlCarrito({id: 12, nombre: 'Carapulcra', precio: 20})">Agregar al carrito</button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <section id="third">
+            <div class="container">
+                <div class="img-container"></div>
+                <div class="texto">
+                    <h2>¡Cada Plato es único como tú!</h2>
+                    <p>"¡Cada plato es único como tú! En ElBuenSabor, no solo cocinamos con pasión, sino que también creamos 
+                        experiencias culinarias que reflejan la riqueza de nuestra cultura y tu propio estilo. Cada plato 
+                        está preparado con ingredientes frescos y un cuidado meticuloso por los detalles. ¡Celebra tus momentos 
+                        especiales con nuestras creaciones auténticas y llenas de sabor peruano!"</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15609.383060287677!2d-76.89472409956021!3d-12.019700311437994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c3c864ac48f5%3A0xed1bde4c798d786e!2sUTP!5e0!3m2!1ses-419!2spe!4v1694564427004!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div id="c1">
+                    <div id="c1-1">
+                        <h2>ElBuenSabor</h2>
+                        <p>Somos un restaurante dedicado a crear experiencias auténticas y deliciosas para
+                            nuestros clientes. Nuestra pasión por la cocina peruana nos motiva a explorar 
+                            nuevas combinaciones y sabores tradicionales, compartiéndolos contigo. En 
+                            ElBuenSabor, cada plato es una obra maestra de tradición y sabor. ¡Permítenos
+                            ser parte de tus momentos especiales con nuestras creaciones únicas!</p>
+                    </div>
+                    <div id="c1-2">
+                        <h2>ENLACES DE INTERÉS</h2>
+                        <ul>
+                            <li><a href="#">✔️ Suscríbete a nuestro Boletín</a></li>
+                            <li><a href="#">✔️ Términos y Condiciones</a></li>
+                            <li><a href="#">✔️ Servicio al Cliente</a></li>
+                            <li><a href="#">✔️ Libro de Reclamaciones</a></li>
+                            <li><a href="#">✔️ Trabaja con Nosotros</a></li>
+                            <li><a href="#">✔️ Catálogo ElBuenSabor</a></li>
+                            <li> ✔️ Visita nuestras redes sociales <div class="redes">
+                                    <a href="https://www.facebook.com/" class="faceboook" target="_blank"><i class="fa-brands fa-facebook"></i> </a>  
+                                    <a href="https://web.whatsapp.com/" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                                </div></li>
+                        </ul>
+                    </div>
+                    <br>
+
+
+                </div>
+
+                <br>
+                <div id="c2">
+                    <p>&copy; 2024 ElBuenSabor. Todos los Derechos Reservados.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Carrito flotante -->
+        <div id="carrito-flotante">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="carrito-contador">0</span>
+        </div>
+
+        <!-- Detalles del carrito -->
+        <div id="carrito-detalles" style="display: none;">
+            <div class="carrito-header">
+                <h3>Carrito de Compras</h3>
+                <button id="cerrar-carrito" class="btn-cerrar-carrito">&times;</button>
+                </div>
+            <div id="carrito-items"></div>
+            <p id="total-precio">Total: S/0.00</p>
+            <label for="monto-pago">Ingrese el monto con el que pagará:</label>
+            <input type="number" id="monto-pago" placeholder="Monto a pagar">
+            <button id="btn-pagar">Pagar</button>
+            <p id="vuelto"></p>
+        </div>
+        
+        <script src="js/carrito.js" type="text/javascript"></script>
+        <script src="js/js.menu.js" type="text/javascript"></script>
+    </body>
+</html>
